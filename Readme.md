@@ -1,8 +1,8 @@
 # Личный проект «Седона»
 
 * Студент: [Кристина Хомутова](https://up.htmlacademy.ru/htmlcss/39/user/2408261).
-* Наставник: [Дмитрий Осадченко](https://htmlacademy.ru/profile/dimaos)`.
-
+* Наставник: [Дмитрий Осадченко](https://htmlacademy.ru/profile/dimaos).
+* Сайт: [Проект](https://kristinakhomutova.github.io/2408261-sedona-39/).
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
