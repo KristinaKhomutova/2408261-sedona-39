@@ -14,7 +14,15 @@
     font-display: swap;
   }
 
+html {
+  height: 100%;
+}
+
 body {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
     font-family: "PT Sans", sans-serif;
     font-size: 18px;
     line-height: 21px;
@@ -24,23 +32,8 @@ body {
     background-color: rgb(242, 242, 242);
   }
 
-  .content-wrapper {
-    background-color: rgb(255, 255, 255);
-    max-width: 1200px;
-    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
-  }
 
-  /*в кодгайде запрет на селекторы общие типа Ul, но как по-другому убрать маркеры из списка???*/
-  .navigation-list,
-  .navigation-user,
-  .advantages-list,
-  .servises-list,
-  .footer-social-list,
-  .breadcrumps-list,
-  .catalog-filter-list,
-  .catalog-view,
-  .catalog-list,
-  .pagination-list {
+  ul li{
     list-style-type: none;
   }
 
@@ -49,29 +42,53 @@ body {
     font-family: inherit;
     background-color: rgb(117, 97, 87);
     color:rgb(255, 255, 255);
+    border-radius: 4px;
+    border: none;
     text-transform: uppercase;
     text-decoration: none;
+    width: 191px;
+    height: 36px;
   }
 
 .booking-button {
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 36px;
 }
 
 .search-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: 20px;
   font-weight: 700;
   line-height: 36px;
+  text-align: center;
+  width: 376px;
+  height: 52px;
+  margin-top: 54px;
+  margin-bottom: 96px;
 }
 
 .newsletter-button {
+  border: none;
   font-size: 20px;
   font-weight: 700;
   line-height: 36px;
   background-color: rgba(130, 179, 211, 1);
 
-  }
+  padding: 0;
+  margin: 0;
+
+  width: 232px;
+  height: 52px;
+}
 
 .card-favorite-button {
   font-size: 16px;
@@ -105,44 +122,161 @@ body {
   line-height: 20px;
 }
 
-.navigation-link,
+.main-page {
+  flex-grow: 1;
+}
+
+/*контейнер под сетку*/
+
+.content-wrapper {
+  background-color: rgb(255, 255, 255);
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+.main-header {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 1060px;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.sedona-logo {
+  display: block;
+  margin-right: 30px;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+}
+
+.navigation-list {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  width: 339px;
+}
+
+.navigation-link {
+  padding: 20px 16px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.navigation-user {
+  padding: 0;
+  margin: 0;
+  margin-left: 285px;
+  max-width: 268px;
+  min-height: 64px;
+
+  display: flex;
+  align-items: center;
+}
+
 .navigation-user-link {
-    font-family: "PT Sans", sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
+  font-family: "PT Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
   }
+
+.likes-number {
+  background-color: rgba(125, 181, 79, 1);
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 10px;
+  text-align: center;
+}
 
 .hero {
-    background-image: url(../images/decor_1stscreen_background.svg), url("../images/background-image-hero.jpg");
-    background-size: 100% auto, cover;
-    background-position: left bottom, left top;
-    background-repeat: no-repeat;
-    background-color:rgb(102, 102, 102);
+  width: 1200px;
+  height: 485px;
+  background-image: url(../images/decor_1stscreen_background.svg), url("../images/background-image-hero.jpg");
+  background-size: 100% auto, cover;
+  background-position: left bottom, left top;
+  background-repeat: no-repeat;
+  background-color:rgb(102, 102, 102);
   }
 
+.hero-picture {
+  display: block;
+  margin: 0 auto;
+  padding-top: 51px;
+}
+
+.advantages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .advantages-main-description {
+  padding: 0;
+  margin: 0;
+  margin-top: 69px;
+  margin-bottom: 25px;
+
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
+
+  width: 620px;
+  height: 72px;
 }
 
-.advantages-item-dark {
+.advantages-reasons {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 69px;;
+
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+
+  width: 651px;
+  height: 26px;
+  }
+
+.advantages-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.advantages-item {
+  margin: 0;
+  padding: 0;
+}
+
+.dark-background {
+  width: 1200px;
   background-color: rgb(130, 179, 211);
 }
 
-.advantages-item-medium {
-  background-color: rgba(131, 179, 211, 0.2);
-}
-
-.advantages-item-light {
+.light-background {
+  width: 400px;
   background-color: rgba(131, 179, 211, 0.12);
 }
 
-.advantages-item-title-dark {
+.medium-background {
+  width: 400px;
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-item-title {
   color: rgba(0, 0, 0, 1);
   font-size: 24px;
   Line-height: 28px;
@@ -151,45 +285,65 @@ body {
   text-align: center;
 }
 
-.advantages-item-description-dark {
-  color: rgba(0, 0, 0, 1);
+.advantages-item-description {
   font-size: 18px;
   Line-height: 21px;
   font-weight: 400;
   text-align: center;
 }
 
-.advantages-item-title-light {
+.light-font {
   color: rgba(255, 255, 255, 1);
-  font-size: 24px;
-  Line-height: 28px;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-align: center;
 }
 
-.advantages-item-description-light {
-  color: rgba(255, 255, 255, 1);
-  font-size: 18px;
-  Line-height: 21px;
-  font-weight: 400;
-  text-align: center;
+.servises {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
 }
 
 .servises-title {
-font-size: 30px;
-font-weight: 700;
-line-height: 36px;
-text-transform: uppercase;
-text-align: center;
+  padding: 0;
+  margin: 0;
+  margin-top: 64px;
+
+  width: 505px;
+  height: 72px;
+
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-align: center;
+  }
+
+.servises-description {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 64px;
+
+  width: 490px;
+  height: 26px;
+  }
+
+.servises-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
 }
 
-.servises-description,
-.advantages-reasons {
-font-size: 22px;
-font-weight: 400;
-line-height: 26px;
-text-align: center;
+.servises-list-item {
+  width: 400px;
+  height: 385px;
 }
 
 .item-dark {
@@ -212,12 +366,23 @@ text-align: center;
   text-align: center;
 }
 
+.booking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .booking-title {
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
   text-align: center;
+  margin: 0;
+  padding: 0;
+  width: 297px;
+  height: 36px;
+  margin-top: 96px;
 }
 
 .booking-description {
@@ -225,29 +390,47 @@ text-align: center;
   font-weight: 400;
   line-height: 26px;
   text-align: center;
+  margin: 0;
+  padding: 0;
+  width: 592px;
+  height: 52px;
+  margin-top: 20px;
 }
 
 .newsletter {
-    background-image: url(../images/filter.jpg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../images/Subscribe.jpg);
     background-size: cover;
     color: rgb(255, 255, 255);
     text-align: center;
+    width: 1200px;
+    height: 414px;
   }
 
 .newsletter-title {
+  padding: 0;
+  margin: 0;
+  margin-top: 96px;
   font-family: inherit;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
-  text-align: center;
+  width: 404px;
+  height: 36px;
 }
 
 .newsletter-description {
   font-size: 22px;
   font-weight: 400;
   line-height: 26px;
-  text-align: center;
+  width: 475px;
+  height: 52px;
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
 }
 
 .field {
@@ -256,29 +439,49 @@ text-align: center;
   font-weight: 400;
   line-height: 24px;
   color:rgba(0, 0, 0, 0.6);
+  background-color: rgba(242, 242, 242, 1);
+  width: 452px;
+  height: 52px;
+  margin-top: 54px;
+  padding: 0;
+  padding-left: 20px;
+  border: none;
+}
+
+.page-footer {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-left: 70px;
+  padding-right: 70px;
+  width: 1060px;
+  height: 120px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.background-filter-wrapper {
+  background-color:rgb(0, 0, 0);
+  background-image: url("../images/filter.jpg");
+  background-size: cover;
+  font-family: inherit;
+  color:rgb(255, 255, 255);
 }
 
 .contacts-tel {
-    font-family: "PT Sans", sans-serif;
+    font-family: inherit;
     font-size: 40px;
     line-height: 40px;
     font-weight: 400;
     text-align: center;
     font-style: normal;
+    width: 331px;
+    height: 40px;
   }
 
 .page-footer a {
     text-decoration: none;
     color: rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
-  }
-
-.background-filter-wrapper {
-    background-color:rgb(0, 0, 0);
-    background-image: url("../images/filter.jpg");
-    background-size: cover;
-    font-family: inherit;
-    color:rgb(255, 255, 255);
   }
 
 /* Breadcrumbs */
@@ -288,7 +491,41 @@ text-align: center;
   font-weight: 400;
 }
 
+.breadcrumps-list {
+  display: flex;
+}
+
+.catalog-filter-wrapper {
+  display: flex;
+  width: 1060px;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+
+.catalog-filter-list {
+  padding: 0;
+  margin: 0;
+}
+
+.catalog-filter-title {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.button-catalog-filter-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-left: 70px;
+}
+
 .inner-header-title {
+  padding: 0;
+  margin: 0;
+  padding-left: 70px;
+  padding-top: 30px;
   font-size: 60px;
   line-height: 78px;
   font-weight: 700;
@@ -301,17 +538,75 @@ text-align: center;
   line-height: 21px;
   color: rgb(51, 51, 51);
   background-color: rgba(255, 255, 255, 1);
+  padding: 0;
+  margin: 0;
+  margin-left: 200px;
+  width: 292px;
+  height: 49px;
 }
 
-.catalog-filter-title,
-.catalog-filter-group-title,
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  column-gap: 20px;
+  row-gap: 20px;
+
+  padding: 0;
+  padding-left: 70px;
+  padding-right: 70px;
+  margin: 0;
+
+  width: 1060px;
+  height: 896px;
+}
+
+.catalog-view {
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
+  width: 160px;
+  height: 48px;
+}
+
+.catalog-filter {
+  display: flex;
+}
+
+.catalog-filter-group {
+  padding: 0;
+  margin: 0;
+  margin-left: 70px;
+  border: none;
+  width: 150px;
+  height: 157px;
+}
+
+.price {
+  display: flex;
+  flex-direction: row;
+  width: 288px;
+  height: 160px;
+}
+
+.catalog-filter-group-title {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
 .catalog-filter-price {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
 }
 
-.infrostructure-input,
+.infrostructure-input {
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+}
+
 .type-housing {
   font-size: 18px;
   line-height: 23px;
@@ -319,27 +614,48 @@ text-align: center;
 }
 
 .type-pricing-input {
+  padding: 0;
+  margin: 0;
   background-color: rgba(242, 242, 242, 1);
   font-family: inherit;
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
+  width: 143px;
+  height: 48px;
 }
 
 .background-catalog-newsletter-wrapper {
   background-color: rgb(255, 255, 255);
 }
 
-.catalog-title,
+.catalog-title {
+  color:rgb(0, 0, 0);
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+}
+
 .catalog-inn-value {
   color:rgb(0, 0, 0);
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
+  padding: 0;
+  margin: 0;
 }
 
-.card-description,
+.card-description {
+  color: rgb(51, 51, 51);
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
 .card-price {
   color: rgb(51, 51, 51);
   font-size: 18px;
@@ -350,9 +666,10 @@ text-align: center;
 .catalog-card {
   border: 1px solid rgb(230, 230, 230);
   border-radius: 4px;
+  max-width: 340px;
+  max-height: 438px;
 }
 
-/*link*/
 .catalog-card-link {
   text-decoration: none;
 }
@@ -373,18 +690,32 @@ text-align: center;
   text-transform: uppercase;
 }
 
-/* Link */
 .pagination-list {
+  display: flex;
+  flex-direction: row;
+  column-gap: 8px;
   background-color: rgb(255, 255, 255);
+  padding: 0;
+  margin-left: 70px;
+  width: 1060px;
+  height: 60px;
 }
 
 .pagination-link {
-  color:rgb(255, 255, 255);
-  background-color: rgb(130, 179, 211);
-  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  width: 60px;
+  height: 60px;
+
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
+  color:rgb(255, 255, 255);
+
+  background-color: rgb(130, 179, 211);
+  text-decoration: none;
 }
 
 .pagination-current {
@@ -393,32 +724,31 @@ text-align: center;
 }
 
 .pagination-more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  width: 60px;
+  height: 60px;
+
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
 }
 
-/*при оборачивании в ДИВ внутренней формы подписки css в упор не видел смены фона!*/
 .inner-newsletter {
-  background-color: rgb(255, 255, 255);
-  text-align: center;
+  background-image: none;
+    background-color: rgb(255, 255, 255);
 }
 
-.inner-footer-newsletter-title {
-  font-size: 30px;
-  line-height: 36px;
+.inner-newsletter-title {
   color: rgb(0, 0, 0);
-  text-transform: uppercase;
-  text-align: center;
 }
 
-.inner-footer-newsletter-description {
-  font-size: 22px;
-  line-height: 26px;
+.inner-newsletter-description {
   color: rgb(0, 0, 0);
-  text-align: center;
 }
 
-  /*.visually-hidden {
+  .visually-hidden {
     display: none;
   }
